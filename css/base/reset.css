@@ -1,0 +1,192 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+button, input, textarea { font-family: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-navy);
+            font-weight: 700;
+        }
+
+a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+ul {
+            list-style: none;
+        }
+
+.container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+.revenue-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 87, 51, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+.revenue-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+        }
+
+.revenue-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+.guide-icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ffebe8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px auto;
+            color: var(--primary);
+        }
+
+.bullet-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+.bullet-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+.bullet-point {
+            width: 14px;
+            height: 10px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+.highlight-banner {
+            background-color: #cbd5e1;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+.unit-thumb {
+            width: 100px;
+            height: 90px;
+            background-color: #94a3b8;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+.unit-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 2px;
+        }
+
+.unit-address {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+.unit-specs {
+            display: flex;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+.unit-spec-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+.testimonials {
+            padding: 120px 0 80px 0;
+            background-color: #ffffff;
+        }
+
+.quote-icon {
+            color: #fca5a5;
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+.stars {
+            color: #f59e0b;
+            margin-bottom: 16px;
+        }
+
+.author-name {
+            font-size: 1.20rem;
+            margin-bottom: 2px;
+        }
+
+.author-role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+.nav-arrow {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ffffff;
+            transition: var(--transition);
+        }
+
+.nav-arrow.prev {
+            left: -60px;
+            color: var(--primary);
+            border-color: #fca5a5;
+        }
+
+.nav-arrow.next {
+            right: -60px;
+            background-color: var(--primary);
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 4px 12px rgba(255, 87, 51, 0.3);
+        }

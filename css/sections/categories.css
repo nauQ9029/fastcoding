@@ -1,0 +1,108 @@
+.section-title {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 48px auto;
+        }
+
+.section-title h2 {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+.section-title p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+.guides-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+
+.guides-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+.dream-spaces {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+.dream-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+.dream-images {
+            position: relative;
+            height: 480px;
+        }
+
+.dream-img-main {
+            width: 80%;
+            height: 90%;
+            background-color: #cbd5e1;
+            border-radius: var(--border-radius);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: center / cover url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85");
+        }
+
+.dream-images::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 8%;
+    width: 42%;
+    height: 58%;
+    border: 12px solid #fff;
+    border-radius: var(--border-radius);
+    background: center / cover url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=85");
+    box-shadow: 0 16px 30px rgba(13, 27, 42, .12);
+}
+
+.dream-features {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+.feature-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+.feature-item.active, .feature-item:hover {
+            background-color: #fdf2f0;
+        }
+
+.feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+.feature-text h4 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+.feature-text p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }

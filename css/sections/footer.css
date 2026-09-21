@@ -1,0 +1,109 @@
+footer {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            padding: 60px 0 30px 0;
+            font-size: 0.9rem;
+        }
+
+.footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+.footer-about p {
+            color: #94a3b8;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+.footer-col h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+.footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+.footer-links a {
+            color: #94a3b8;
+        }
+
+.footer-links a:hover {
+            color: var(--primary);
+        }
+
+.footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 30px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+@media (max-width: 1024px) {
+            .hero-grid, .dream-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-visual {
+                height: 400px;
+            }
+            .hero-curve-arrow {
+                top: 210px;
+                left: 42%;
+                width: 230px;
+            }
+            .today-sells-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .today-img-box:last-child {
+                display: none;
+            }
+            .nav-arrow.prev { left: 0; }
+            .nav-arrow.next { right: 0; }
+        }
+
+@media (max-width: 768px) {
+            .top-bar { display: none; }
+            .nav-links, .nav-actions { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .guides-grid, .properties-grid, .projects-grid, .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .today-sells-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-arrow { display: none; }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .revenue-card {
+                left: 10px;
+                bottom: -20px;
+            }
+            .hero-curve-arrow {
+                display: none;
+            }
+        }
+
+@media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .property-details {
+                width: 70%;
+            }
+            .property-action-btn {
+                width: 30%;
+            }
+        }
