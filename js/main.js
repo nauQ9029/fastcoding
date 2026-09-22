@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================= */
 
     const heroImages = [
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85',
-        'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85'
+        'assets/images/hero/hero1.jpg',
+        'assets/images/hero/hero2.jpg',
+        'assets/images/hero/hero3.jpg'
     ];
 
     const heroSteps = [...document.querySelectorAll('.hero-house-steps .house-step')];
@@ -182,15 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         2: {
-            tall: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85',
-            top: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=85',
-            bottom: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=85'
+            tall: 'assets/images/houses/tall2.jpg',
+            top: 'assets/images/houses/top2.jpg',
+            bottom: 'assets/images/houses/bottom3.jpg'
         },
 
         3: {
-            tall: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=85',
-            top: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=700&q=85',
-            bottom: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=85'
+            tall: 'assets/images/houses/tall3.jpg',
+            top: 'assets/images/houses/top3.jpg',
+            bottom: 'assets/images/houses/bottom3.jpg'
         }
     };
 
