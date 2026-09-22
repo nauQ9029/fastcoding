@@ -1,0 +1,121 @@
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--color-white, #ffffff);
+}
+
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.testimonial-img-box {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+}
+
+.testimonial-bg-block {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary, #FF5A3C);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.testimonial-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-img__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.testimonial-content {
+    max-width: 500px;
+}
+
+.quote-icon {
+    font-size: 60px;
+    line-height: 1;
+    color: #FFB8B0;
+    font-family: Georgia, serif;
+    margin-bottom: -10px;
+}
+
+.testimonial-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-heading, #0F172A);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.stars {
+    color: #FFC107;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-heading, #0F172A);
+    margin-bottom: 4px;
+}
+
+.author-role {
+    font-size: 0.875rem;
+    color: var(--color-body, #64748B);
+}
+
+.nav-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow.next {
+    background-color: var(--color-primary, #FF5A3C);
+    color: #ffffff;
+    border-color: var(--color-primary, #FF5A3C);
+    box-shadow: 0 4px 12px rgba(255, 90, 60, 0.3);
+}
+
+@media (max-width: 768px) {
+    .testimonial-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .testimonial-img-box {
+        width: 260px;
+        height: 260px;
+    }
+}
