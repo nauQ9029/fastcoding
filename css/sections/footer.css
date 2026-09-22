@@ -61,8 +61,8 @@ footer {
             .today-sells-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .today-img-box:last-child {
-                display: none;
+            .today-media {
+                min-height: 420px;
             }
             .nav-arrow.prev { left: 0; }
             .nav-arrow.next { right: 0; }
@@ -78,6 +78,9 @@ footer {
             }
             .today-sells-grid {
                 grid-template-columns: 1fr;
+            }
+            .today-media {
+                min-height: 460px;
             }
             .testimonial-wrapper {
                 flex-direction: column;

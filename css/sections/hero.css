@@ -60,13 +60,18 @@
             transform: rotate(-4deg);
         }
 
-/* Hero Slider Indicators */
-        .hero-slider-nav {
-            margin-top: 50px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
+.hero-slider-nav {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-slider-nav .house-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
 
 .house-tabs {
             display: flex;

@@ -41,30 +41,32 @@
 .dream-images {
             position: relative;
             height: 480px;
+            isolation: isolate;
         }
 
 .dream-img-main {
-            width: 80%;
-            height: 90%;
+            width: 56%;
+            height: 78%;
             background-color: #cbd5e1;
-            border-radius: var(--border-radius);
+            border-radius: 0;
             position: absolute;
             bottom: 0;
             left: 0;
             background: center / cover url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85");
+            z-index: 2;
         }
 
 .dream-images::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 8%;
-    width: 42%;
-    height: 58%;
-    border: 12px solid #fff;
-    border-radius: var(--border-radius);
+    right: 18%;
+    top: 0;
+    width: 60%;
+    height: 84%;
+    border: 0;
+    border-radius: 0;
     background: center / cover url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=85");
-    box-shadow: 0 16px 30px rgba(13, 27, 42, .12);
+    z-index: 1;
 }
 
 .dream-features {
