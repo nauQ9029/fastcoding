@@ -10,7 +10,6 @@
     align-items: start;
 }
 
-/* Header & Tag */
 .about-tag {
     display: flex;
     align-items: center;
@@ -38,7 +37,6 @@
     max-width: 440px;
 }
 
-/* Bullet List */
 .bullet-list {
     list-style: none;
     padding: 0;
@@ -65,7 +63,6 @@
     flex-shrink: 0;
 }
 
-/* House Step Navigation (Bottom Left UI) */
 .house-slider-wrapper {
     display: flex;
     align-items: flex-end;
@@ -92,7 +89,6 @@
     transition: background-color 0.2s;
 }
 
-/* Container alignment */
 .house-steps {
     display: flex;
     align-items: flex-end;
@@ -118,13 +114,11 @@
     transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
 }
 
-/* Height when active vs inactive neighboring levels */
 .house-step.active {
     height: 52px;
     background-color: #a0a0a0;
 }
 
-/* Intermediate height for middle tab when active is on the edge, or adjust dynamically */
 .house-step.step-mid {
     height: 38px;
 }
@@ -134,7 +128,6 @@
     background-color: #a0a0a0;
 }
 
-/* Progress Line & Page Numbers */
 .slider-progress-nav {
     display: flex;
     align-items: center;
@@ -177,7 +170,6 @@
     color: #0a142f;
 }
 
-/* Right Media Gallery Grid */
 .today-media {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -1,11 +1,9 @@
-/* Contact Section Base */
 .contact-section {
   padding: 80px 0;
   background-color: #ffffff;
   color: #333333;
 }
 
-/* Section Header */
 .section-header {
   text-align: center;
   margin-bottom: 50px;
@@ -34,7 +32,6 @@
   align-items: start;
 }
 
-/* Left Column Styling */
 .contact-info .description {
   color: #8c93a0;
   font-size: 1rem;
@@ -130,7 +127,6 @@
   z-index: 4;
 }
 
-/* Contact Card Form */
 .contact-card {
   background-color: #f4f7f8;
   padding: 40px;
@@ -214,16 +210,12 @@
   transform: translateY(1px);
 }
 
-/* --- Responsive Breakpoints --- */
-
-/* Laptops & Tablets (1024px and below) */
 @media (max-width: 1024px) {
   .contact-wrapper {
     gap: 40px;
   }
 }
 
-/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .contact-section {
     padding: 50px 0;
@@ -257,7 +249,6 @@
   }
 }
 
-/* Mobile Devices (480px and below) */
 @media (max-width: 480px) {
   .badge-orange {
     width: 36px;

@@ -1,11 +1,11 @@
 :root {
-            --primary: #ff5733;
-            --primary-hover: #e04824;
-            --secondary-bg: #f8f9fa;
-            --dark-navy: #0d1b2a;
-            --text-main: #2b2d42;
-            --text-muted: #6c757d;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            --border-radius: 16px;
-            --transition: all 0.3s ease;
-        }
+    --primary: #ff5733;
+    --primary-hover: #e04824;
+    --secondary-bg: #f8f9fa;
+    --dark-navy: #0d1b2a;
+    --text-main: #2b2d42;
+    --text-muted: #6c757d;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}

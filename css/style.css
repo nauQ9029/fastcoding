@@ -15,3 +15,7 @@
 @import url("sections/testimonials.css");
 @import url("sections/projects.css");
 @import url("responsive.css");
+
+html {
+  scroll-behavior: smooth;
+}

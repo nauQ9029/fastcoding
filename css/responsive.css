@@ -1,5 +1,3 @@
-/* Shared responsive layout rules */
-
 @media (max-width: 1200px) {
     .container {
         padding-left: 32px;
@@ -25,6 +23,7 @@
 }
 
 @media (max-width: 992px) {
+
     .guides-grid,
     .services-grid,
     .projects-grid,
@@ -303,6 +302,7 @@
 }
 
 @media (max-width: 576px) {
+
     .guides-grid,
     .services-grid,
     .projects-grid,

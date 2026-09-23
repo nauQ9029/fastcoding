@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero-img-placeholder');
     const propertyTabs = [...document.querySelectorAll('.prop-tab')];
 
-/* =========================================
-   Hero Slider
-   ========================================= */
+    /* =========================================
+       Hero Slider
+       ========================================= */
 
     const heroImages = [
         'assets/images/hero/hero1.jpg',
@@ -70,33 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Event Listeners for Steps
     heroSteps.forEach((step) => {
         step.addEventListener('click', () => {
             setSlide(Number(step.dataset.slide));
         });
     });
 
-    // Event Listeners for Number Indicators
     heroIndicators.forEach((num) => {
         num.addEventListener('click', () => {
             setSlide(Number(num.dataset.slide));
         });
     });
 
-    // Progress Bar Click Selection
     heroProgressBar?.addEventListener('click', (event) => {
         const rect = heroProgressBar.getBoundingClientRect();
         const clickX = event.clientX - rect.left;
         const clickedRatio = clickX / rect.width;
-        
+
         let nextSlide = Math.floor(clickedRatio * heroImages.length);
         nextSlide = Math.max(0, Math.min(heroImages.length - 1, nextSlide));
-        
+
         setSlide(nextSlide);
     });
 
-    // Timer Initialization
     let slide = 0;
     if (heroSteps.length > 0) {
         setSlide(slide);
@@ -127,31 +123,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* =========================================
-       Header / Mobile Navigation
-       ========================================= */
+           Header / Navigation, Smooth Scroll & Scrollspy
+           ========================================= */
 
-    window.addEventListener(
-        'scroll',
-        () => {
-            header?.classList.toggle(
-                'is-scrolled',
-                window.scrollY > 8
-            );
-        },
-        { passive: true }
-    );
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id]');
 
-    toggle?.addEventListener('click', () => {
-        const open = nav?.classList.toggle('is-open');
+    let isClickScrolling = false;
+    let scrollTimeout = null;
 
-        toggle.setAttribute('aria-expanded', open);
-    });
+    const setActiveLink = (targetId) => {
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            link.classList.toggle('active', href === targetId);
+        });
+    };
 
-    document.querySelectorAll('.nav-links a').forEach((link) => {
-        link.addEventListener('click', () => {
-            nav?.classList.remove('is-open');
+    // Custom Smooth Scroll Engine
+    const smoothScrollTo = (targetPosition, duration = 600, callback) => {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        const easeInOutQuad = (t, b, c, d) => {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        };
+
+        const animation = (currentTime) => {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+            window.scrollTo(0, run);
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            } else {
+                window.scrollTo(0, targetPosition);
+                if (callback) callback();
+            }
+        };
+
+        requestAnimationFrame(animation);
+    };
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const targetId = link.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                event.preventDefault();
+
+                isClickScrolling = true;
+
+                setActiveLink(targetId);
+
+                nav?.classList.remove('is-open');
+                toggle?.setAttribute('aria-expanded', 'false');
+
+                const headerOffset = header ? header.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                if (scrollTimeout) clearTimeout(scrollTimeout);
+
+                smoothScrollTo(offsetPosition, 600, () => {
+                    scrollTimeout = setTimeout(() => {
+                        isClickScrolling = false;
+                    }, 100);
+                });
+            }
         });
     });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-25% 0px -65% 0px',
+        threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        if (isClickScrolling) return;
+
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = `#${entry.target.getAttribute('id')}`;
+                setActiveLink(id);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach((sec) => sectionObserver.observe(sec));
 
     /* =========================================
        Contact Form
@@ -194,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const section = document.querySelector('#properties');
+    const section = document.querySelector('#market') || document.querySelector('.properties-section');
 
     if (section) {
         let currentHouse = 1;
@@ -220,10 +287,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const stepNum = Number(step.dataset.house);
                 step.classList.toggle('active', stepNum === currentHouse);
 
-                // Remove existing height level classes
                 step.classList.remove('step-high', 'step-mid', 'step-low');
 
-                // Assign height dynamically based on active house
                 if (currentHouse === 1) {
                     if (stepNum === 1) step.classList.add('step-high');
                     else if (stepNum === 2) step.classList.add('step-mid');
