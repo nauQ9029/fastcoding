@@ -97,6 +97,7 @@ header.is-scrolled {
         width: 108px;
     }
 
+    /* Mobile Dropdown (Smooth Fade + Slide) */
     .nav-links {
         display: flex;
         position: absolute;
@@ -123,40 +124,37 @@ header.is-scrolled {
         transform: translateY(0);
         pointer-events: auto;
     }
-}
 
-/* Mobile Toggle Styling & Transformation */
-.mobile-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 26px;
-    height: 18px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
+    /* Mobile Toggle Display & Animation (ONLY on Mobile) */
+    .mobile-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 18px;
+        padding: 0;
+    }
 
-.mobile-toggle span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark-navy);
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center;
-}
+    .mobile-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--dark-navy);
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center;
+    }
 
-/* Transforms burger lines to 'X' */
-.mobile-toggle.is-active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
+    /* Transforms burger lines to 'X' */
+    .mobile-toggle.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-.mobile-toggle.is-active span:nth-child(2) {
-    opacity: 0;
-}
+    .mobile-toggle.is-active span:nth-child(2) {
+        opacity: 0;
+    }
 
-.mobile-toggle.is-active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    .mobile-toggle.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
